@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350sp"
+    android:layout_height="350sp"
+    android:background="@color/transparent"
+    tools:context=".MainActivity"
+    android:layout_gravity="center_horizontal">
+
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="0sp"
+        android:layout_height="1sp"
+        android:layout_marginTop="24sp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@id/noButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"></View>
+
+    <Button
+        android:id="@+id/noButton"
+        android:layout_width="175sp"
+        android:layout_height="100sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/divider2"
+        android:text="No, I'm a Loser"
+        android:textSize="28sp"
+        android:textAllCaps="false"
+        android:background="@color/transparent" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="1sp"
+        android:layout_height="0sp"
+
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/divider1"
+        app:layout_constraintBottom_toBottomOf="@id/noButton"
+        app:layout_constraintStart_toEndOf="@id/noButton"
+        app:layout_constraintEnd_toEndOf="@id/yesButton"></View>
+
+    <Button
+        android:id="@+id/yesButton"
+        android:layout_width="175sp"
+        android:layout_height="100sp"
+        app:layout_constraintStart_toEndOf="@id/divider2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Yes, I'm a Chad"
+        android:textSize="28sp"
+        android:textAllCaps="false"
+        android:background="@color/transparent"/>
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="130sp"
+        android:layout_height="130sp"
+        app:srcCompat="@drawable/pic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25sp"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="275sp"
+        android:layout_height="69sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photo"
+        android:layout_marginTop="10sp"
+        android:text="Were You a Cool Guy Today?"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

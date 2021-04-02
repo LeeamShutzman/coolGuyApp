@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".initialSetup">
+
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="27sp"
+        android:layout_marginRight="30sp"
+        android:fontFamily="@font/copse"
+        android:text="How Many Days Have You Been Cool?"
+        android:textAlignment="center"
+        android:textColor="@color/colorYellow"
+        android:textSize="30sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <NumberPicker
+        android:id="@+id/daysPicker"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="50sp"
+        android:layout_marginBottom="30sp"
+        android:background="@color/transparent"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical"
+        android:theme="@style/NumberPickerTheme"
+        app:layout_constraintBottom_toTopOf="@id/amPmPicker"
+        app:layout_constraintEnd_toStartOf="@+id/timePicker"
+        app:layout_constraintHeight_default="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <NumberPicker
+        android:id="@+id/timePicker"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@+id/daysPicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@id/amPmPicker"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:layout_marginEnd="50sp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="30sp"
+        android:theme="@style/NumberPickerTheme"
+        android:descendantFocusability="blocksDescendants"
+        />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/a99rnbdjdo7qbirto4a5ivqhr3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:text="Days"
+        android:textColor="@color/colorWhite"
+        android:textSize="35sp"
+        android:fontFamily="@font/copse"
+        app:layout_constraintEnd_toEndOf="@+id/daysPicker"
+        app:layout_constraintStart_toStartOf="@+id/daysPicker"
+        app:layout_constraintTop_toBottomOf="@id/prompt" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notfication\nTime"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
+        android:fontFamily="@font/copse"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/timePicker"
+        app:layout_constraintStart_toStartOf="@+id/timePicker"
+        app:layout_constraintTop_toTopOf="@id/textView4"
+        app:layout_constraintBottom_toBottomOf="@id/textView4"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/amPmPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/timePicker"
+        app:layout_constraintEnd_toEndOf="@id/timePicker"
+        app:layout_constraintTop_toBottomOf="@id/timePicker"
+        app:layout_constraintBottom_toTopOf="@id/button"
+        android:layout_marginBottom="30sp"
+        app:showText="true"
+        android:textOn="PM"
+        android:textOff="AM"
+        android:textSize="10dp"
+        app:switchTextAppearance="@style/SwitchTextAppearance"
+        tools:layout_editor_absoluteX="271dp"
+        tools:layout_editor_absoluteY="668dp"
+        android:scaleX="2"
+        android:scaleY="2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
